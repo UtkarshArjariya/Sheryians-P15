@@ -25,7 +25,7 @@ b = {"name": "John", "age": 25}  # Dictionary, it can be any set of key-value pa
 c = ("apple", "banana", "cherry")  # Tuple, it can be any set of values, it will be under ()
 d = {"apple", "banana", "cherry"}  # Set, it can be any set of values, it will be under {}
 
-s = nve # None data type, it will clear/empty any variable or object 
+s = None  # None data type, it will clear/empty any variable or object 
 
 print(type(x))  # Output: <class 'int'>
 print(type(y))  # Output: <class 'str'>
