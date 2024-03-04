@@ -1,4 +1,4 @@
-# 29 feb python notes
+# Day 2 notes
 
 
 # 3 naming conventions

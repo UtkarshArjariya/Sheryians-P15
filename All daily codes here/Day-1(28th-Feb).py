@@ -1,4 +1,5 @@
-# 28th Feb notes
+# Day 1 notes
+
 
 # Below is a example of how to open a new tab in the browser using python, this is only for your reference, you can use this in your project if you want to open a new tab in the browser using python.
 

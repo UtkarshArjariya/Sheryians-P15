@@ -1,4 +1,4 @@
-# 1st march 2024 notes
+# Day 3 notes
 
 
 # print() : gives out put of a specific thing
