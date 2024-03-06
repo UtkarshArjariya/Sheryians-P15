@@ -50,6 +50,6 @@ print(b or a)
 # Note: Short circuiting of and operator: If the first condition is false in the and operator, then the second condition will not be checked because the result will be false.
 
 # Falsy values
-# 0, 0.0, "", [], {}, None, False
+# 0, 0.0, ""/'', [], {}, None, False
 
 print(0 and 5)  # 0
