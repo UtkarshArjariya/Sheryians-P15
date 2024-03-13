@@ -130,3 +130,12 @@ if alp in "aeiouAEIOU":
 else:
     print(f"{alp} is a consonent")
 '''''
+'''''
+alp = input("Enter an alphabet: ")
+if alp.isnumeric() or len(alp) > 1:
+    print("Bhaag ja lawde")
+elif alp in "aeiouAEIOU":
+    print(f"{alp} is a vowel")
+else:
+    print(f"{alp} is a consonent")
+'''''
