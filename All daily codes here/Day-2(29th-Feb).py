@@ -8,7 +8,7 @@
 
 # we use decimal number system in our real life
 
-print(ord("a")) #print ascii code of a
+print(ord("a")) #print ascii code of a is 97
 
 # data types
 
