@@ -1,7 +1,7 @@
 # Day 5 notes
 
 
-# Shorthand operators
+# Shorthand operators or Assignment operators
 # +=, -=, *=, /=, %=, **=, //=
 
 a = 12
