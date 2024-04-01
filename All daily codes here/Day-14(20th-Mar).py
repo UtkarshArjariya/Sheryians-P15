@@ -72,8 +72,10 @@ for i in range(1, n+1):
         count += 1
 if count == 2:
     print("It is a prime number")
+elif count > 2:
+    print("It is a composite number")
 else:
-    print("It is not a prime number")
+    print("It is Unity")
 '''''
 # 14. Accept a number and print its reverse
 '''''
