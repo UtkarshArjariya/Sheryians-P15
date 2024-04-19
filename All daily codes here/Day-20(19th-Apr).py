@@ -31,6 +31,7 @@ print(a[1:4:2])
 # List methods - append(), insert(), remove(), pop(), clear(), index(), count(), sort(), reverse(), copy()
 # del - to delete the element from the list, it is same is remove() but remove() is used to remove the element by value and del is used to remove the element by index.
 '''''
+# In this there is a example of list slicing and deletion
 l = [21, 34, 56, 78, 90, 90, 78, 56, 54, 23, 10]
 # print(l[-6:-11:-1])
 del l[1]
