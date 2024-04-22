@@ -45,6 +45,10 @@ print(type(s))
 # issubset()      - returns whether another set contains this set or not
 # issuperset()    - returns whether this set contains another set or not
 # pop()           - removes an element from the set
+'''''
+x = s.pop()   # It will always remove the last element from the set, it will be random.
+print(x)
+'''''
 # remove()        - removes the specified element
 '''''
 s.remove(123)  # if the element is not present in the set then it will give an error
