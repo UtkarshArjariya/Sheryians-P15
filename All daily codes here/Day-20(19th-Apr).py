@@ -36,11 +36,6 @@ l = [21, 34, 56, 78, 90, 90, 78, 56, 54, 23, 10]
 del l[1]
 print(l)
 '''''
-# Set - denoted by {} & empty set is created by set()
-# Set is a collection of items that are unordered and unindexed. No duplicate members. It is a collection of items that are unordered and unindexed. It is mutable. It is a collection of items that are unordered and unindexed. It is a collection of items that are unordered and unindexed.
-
-
-
 # Dictionary - denoted by {key:value} & empty dictionary is created by {}
 # Dictionary is a collection of items that are unordered, changeable and indexed. No duplicate members. It is a collection of items that are unordered, changeable and indexed. It is mutable. It is a collection of items that are unordered, changeable and indexed. It is a collection of items that are unordered, changeable and indexed.
 
