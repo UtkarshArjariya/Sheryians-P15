@@ -36,12 +36,6 @@ l = [21, 34, 56, 78, 90, 90, 78, 56, 54, 23, 10]
 del l[1]
 print(l)
 '''''
-
-# Tuple - denoted by ()
-# Tuple is a collection of items that are ordered and unchangeable. Allows duplicate members. It is a sequence data type that can store a collection of items. It is immutable. It is sequence data type that can store a collection of items.
-
-
-
 # Set - denoted by {} & empty set is created by set()
 # Set is a collection of items that are unordered and unindexed. No duplicate members. It is a collection of items that are unordered and unindexed. It is mutable. It is a collection of items that are unordered and unindexed. It is a collection of items that are unordered and unindexed.
 
