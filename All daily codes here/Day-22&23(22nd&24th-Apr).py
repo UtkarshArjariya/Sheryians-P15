@@ -1,4 +1,4 @@
-# Day 22 notes
+# Day 22 & 23 notes
 
 # Tuple - denoted by ()
 # Tuple is a collection of items that are ordered and unchangeable. Allows duplicate members. It is a sequence data type that can store a collection of items. It is immutable. It is sequence data type that can store a collection of items.
@@ -28,7 +28,7 @@ while i < len(t):
 
 
 # Set - denoted by {} & empty set is created by set()
-# Set is a collection of items that are unordered and unindexed. No duplicate members. It is a collection of items that are unordered and unindexed. It is mutable. It is a collection of items that are unordered and unindexed. It is a collection of items that are unordered and unindexed.
+# Set is a collection of items that are unordered and unindexed. No duplicate members. It is a collection of items that are unordered and unindexed. It is mutable. It is a collection of items that are unordered and unindexed. It is a collection of items that are unordered and unindexed. Only for loop can be used to traverse the set without using len() function.
 s = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3}
 '''''
 s = set()   # empty set
@@ -37,16 +37,58 @@ print(type(s))
 # Set methods - visit w3schools for more detailed explanation.
 
 # add()           - adds an element to the set
+'''''
+s.add(123)
+print(s)
+'''''
 # clear()         - removes all the elements from the set
+'''''
+s.clear()
+print(s)
+'''''
 # copy()          - returns a copy of the set
+'''''
+import numpy as np
+x = [1, 2, 3, 4, 5, 6]
+y = np.array(x)
+
+
+'''''
 # difference()    - returns a set containing the difference between two or more sets
+a = {1, 2, 3, 4, 5}
+b = {3, 4, 5, 6, 7}
+'''''
+print(a.difference(b))   # a - b, It will print the elements which are present in a but not in b
+print(b.difference(a))   # b - a, It will print the elements which are present in b but not in a
+'''''
+# difference_update() - removes the items in this set that are also included in another, specified set
+'''''
+a.difference_update(b)
+print(a)
+'''''
 # intersection()  - returns a set, that is the intersection of two other sets
+'''''
+print(a.intersection(b))
+'''''
+# union           - returns a set containing the union of sets
+'''''
+print(a.union(b))
+'''''
 # isdisjoint()    - returns whether two sets have a intersection or not
+'''''
+print(b.isdisjoint(a))  # If there is no common element between a and b then it will return True otherwise False
+'''''
 # issubset()      - returns whether another set contains this set or not
+'''''
+print(b.issubset(a))    # If all the elements of b are present in a then it will return True otherwise False
+'''''
 # issuperset()    - returns whether this set contains another set or not
+'''''
+print(b.issuperset(a))  # If all the elements of a are present in b then it will return True otherwise False
+'''''
 # pop()           - removes an element from the set
 '''''
-x = s.pop()   # It will always remove the last element from the set, it will be random.
+x = s.pop()   # It will always remove the first element from the set.
 print(x)
 '''''
 # remove()        - removes the specified element
