@@ -34,7 +34,7 @@ s = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3}
 s = set()   # empty set
 print(type(s))
 '''''
-# Set methods
+# Set methods - visit w3schools for more detailed explanation.
 
 # add()           - adds an element to the set
 # clear()         - removes all the elements from the set
