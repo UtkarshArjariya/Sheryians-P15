@@ -77,5 +77,80 @@ for i in range(len(l)):
 
 '''''
 # 6. Mean of List elements.
+'''''
+l = [25, 56, 45, 89, 78, 45, 12, 78, 45, 23]
+sum = 0
+for i in l:
+    sum += i
+print("Average of the list is: ",sum/len(l))
+'''''
+# 7. Find the greatest element and print its index too.
+#    {2, 96, 69, 77, 145, 20} = Max element = 145 found at 4 index
+'''''
+l = [2, 96, 69, 77, 145, 20]
+max = l[0]
 
-# l = [25, 56, 45, 89, 78, 45, 12, 78, 45, 23]
+for i in l:
+    if i>max:
+        max = i
+        
+print(f"Max element = {max} \nFound at {l.index(max)} index")
+'''''
+# 8. Find the smallest element and print its index too.
+#    {2, 96, 69, 77, 145, 20} = Min element = 2 found at 0 index
+'''''
+l = [2, 96, 69, 77, 145, 20]
+small = l[0]
+
+for i in l:
+    if i < small:
+        small = i
+        
+print(f"Min element = {small} \nFound at {l.index(small)} index")
+'''''
+# 9. Find the second greatest element0 
+#    {2, 96, 69, 77, 145, 20} = Second greatest element = 96
+'''''
+l = [2, 96, 69, 77, 145, 20]
+smax = l[0]
+
+for i in l:
+    if i>smax:
+        smax = i
+        
+l.remove(smax)
+smax = l[0]
+
+for i in l:
+    if i>smax:
+        smax = i
+        
+print(f"Second greatest element on the list: {smax}")
+
+#                   or
+
+l = [2, 56, 89, 3, 41, 66, 42]
+max = l[0]
+max2 = 0
+
+for i in l:
+    if i > max:
+        max2 = max
+        max = i
+    elif i > max2:
+        max2 = i
+        
+print(f"Second greatest element on the list: {max2}")
+'''''
+# 10. Check if List is sorted or not.
+'''''
+l = [1,2,3,4,5,6]
+l1 = l.copy()
+
+l.sort()
+
+if l1 == l:
+    print("List is sorted")
+else:
+    print("List is not sorted")
+'''''
