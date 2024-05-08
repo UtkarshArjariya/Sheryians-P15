@@ -83,10 +83,14 @@ print("Frequency of elements is:", f)
 '''''
 # 6. Write a Python program to combine two dictionary by adding values for common keys.
 '''''
-a = {1:29,3:56,5:69}
-b = {2:129,4:45,6:12,3:55}
+a = {1: 10, 2: 20, 3: 30}
+b = {2: 5, 3: 15, 4: 25}
 
-a.update(b)
+for key in b:
+    if key in a:
+        a[key] += b[key]
+    else:
+        a[key] = b[key]
 
 print(a)
 '''''
