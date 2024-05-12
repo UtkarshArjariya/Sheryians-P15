@@ -39,7 +39,7 @@ for i in range(a):
     num = int(input("Enter a number: "))
     s.append(num)
 
-for i in range(0,len(s)-1):
+for i in range(len(s)-1):
     if int(s[i])+1 == int(s[i+1]):
         continue
     else:
