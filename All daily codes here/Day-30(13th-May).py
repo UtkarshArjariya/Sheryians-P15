@@ -39,7 +39,26 @@ def dets():
 
 # print(list(gets()))
 x = dets()
-for i in x:
-    print(i)
+# for i in x:
+#     print(i)
     
+# 2. Generator expression
+# 
 
+m = (i for i in l) # Here using the previous list l, we are creating a generator expression.
+g = (i for i in l)
+
+# print(m)
+# print(g)
+
+m_size = size(m)
+g_size = size(g)
+
+# print(m_size)
+# print(g_size)
+
+g_time = time("[i for i in list(range(1000))]", number=10)
+m_time = time("[i for i in list(range(1000))]", number=10)
+
+print(m_time)
+print(g_time)
