@@ -58,7 +58,7 @@ g_size = size(g)
 # print(g_size)
 
 g_time = time("[i for i in list(range(1000))]", number=10)
-m_time = time("[i for i in list(range(1000))]", number=10)
+m_time = time("(i for i in list(range(1000)))", number=10)
 
-print(m_time)
 print(g_time)
+print(m_time)
