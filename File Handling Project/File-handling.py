@@ -2,9 +2,11 @@
 # We are going to make a file handling project in next 2 days, and you can check my commits here in this folder
 
 from pathlib import Path
+import os
 
 def createfolder():
     try:
+        readfilesandfolders()
         namef = input("Tell you folder name: ")
         if namef == "":
             namef == "New folder"
@@ -36,6 +38,7 @@ def updatefolder():
         
 def deletefolder():
     try:
+        readfilesandfolders()
         name = input("Enter the name of your folder: ")
         path = Path(name)
         if path.exists() and path.is_dir():
@@ -47,6 +50,7 @@ def deletefolder():
         
 def createfile():
     try:
+        readfilesandfolders()
         name = input("Enter the name of the file: ")
         path = Path(name)
         if not path.exists():
@@ -61,6 +65,7 @@ def createfile():
 
 def readfile():
     try:
+        readfilesandfolders()
         name = input("Enter the file you want to read: ")
         path = Path(name)
         if path.exists():
@@ -73,16 +78,50 @@ def readfile():
         print(f"{err} sorry this error occured")
 
 def updatefile():
-    name = input("Enter the file name you want to update: ")
-    path = Path(name)
-    if path.exists():
-        print("Press 1 for changing the file name")
-        print("Press 2 for appending new content in the file")
-        print("Press 3 for deleteing all the content of the file")
-        choice = int(input("What you wanna do: "))
-        
-        if choice == 1:
+    try:
+        readfilesandfolders()
+        name = input("Enter the file name you want to update: ")
+        path = Path("./All daily codes here/File Handling Project")
+        if path.exists():
+            print("Press 1 for changing the file name")
+            print("Press 2 for appending new content in the file")
+            print("Press 3 for deleteing all the content of the file")
+            choice = int(input("What you wanna do: "))
+
+            if choice == 1:
+                new_name = input("Enter the new name for the file: ")
+                new_path = Path(new_name)
+                if not new_path.exists():
+                    path.rename(new_path)
+                    print("Name changes successfully")
+                else:
+                    print("Sorry, this file name already exist")
+            elif choice == 2:
+                with open(name, 'a') as fs:
+                    data = input("What do you want to append: ")
+                    fs.write(" " + data)
+                print("Content appended successfully")
+            elif choice == 3:
+                with open(name, "w") as fs:
+                    data = input("Press enter to skip or write new data: ")
+                    fs.write(data)
+                print("All the content deleted successfully")
+    except Exception as err:
+        print(f"{err} sorry this error occured")
             
+def deletefile():
+    try:
+        readfilesandfolders()
+        name = input("Enter the file name your want to delete: ")
+        path = Path(name)
+        if path.exists() and path.is_file():
+            # os.remove  # You can use this also to remove the path
+            path.unlink()
+        else:
+            print("Sorry this file doesn't exist")
+    except Exception as err:
+        print(f"{err} sorry this error occured")
+
 
 print("Press 1 for creating a folder")
 print("Press 2 for reading files and folders")
@@ -91,6 +130,7 @@ print("Press 4 for deleting a folder")
 print("Press 5 for creating a file")
 print("Press 6 for read a file")
 print("Press 7 for updating a file")
+print("Press 8 for deleting a file")
 
 check = int(input("What do you want: "))
 
@@ -108,3 +148,5 @@ elif check == 6:
     readfile()
 elif check == 7:
     updatefile()
+elif check == 8:
+    deletefile()
