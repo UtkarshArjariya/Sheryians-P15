@@ -81,7 +81,7 @@ def updatefile():
     try:
         readfilesandfolders()
         name = input("Enter the file name you want to update: ")
-        path = Path("./All daily codes here/File Handling Project")
+        path = Path(name)
         if path.exists():
             print("Press 1 for changing the file name")
             print("Press 2 for appending new content in the file")
@@ -115,7 +115,7 @@ def deletefile():
         name = input("Enter the file name your want to delete: ")
         path = Path(name)
         if path.exists() and path.is_file():
-            # os.remove  # You can use this also to remove the path
+            # os.remove     # You can use this also to remove the path
             path.unlink()
         else:
             print("Sorry this file doesn't exist")
