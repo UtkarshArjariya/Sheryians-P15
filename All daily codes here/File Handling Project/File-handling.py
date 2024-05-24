@@ -21,21 +21,76 @@ def readfilesandfolders():
         print(f"{i+1} : {v}")
         
 def updatefolder():
-    readfilesandfolders()
-    name = input("Which folder you want to update/change name: ")
-    path = Path(name)
-    if path.exists() and path.is_dir():
-        newname = input("Enter the new name: ")
-        new_path = Path(newname)
-        path.rename(new_path)
-    else:
-        print("No such named folder exists")   
+    try:
+        readfilesandfolders()
+        name = input("Which folder you want to update/change name: ")
+        path = Path(name)
+        if path.exists() and path.is_dir():
+            newname = input("Enter the new name: ")
+            new_path = Path(newname)
+            path.rename(new_path)
+        else:
+            print("No such named folder exists") 
+    except Exception as err:
+        print(f"{err} sorry this error occured")  
+        
+def deletefolder():
+    try:
+        name = input("Enter the name of your folder: ")
+        path = Path(name)
+        if path.exists() and path.is_dir():
+            path.rmdir()
+        else:
+            print("No path exist with this name")
+    except Exception as err:
+        print(f"{err} sorry this error occured")
+        
+def createfile():
+    try:
+        name = input("Enter the name of the file: ")
+        path = Path(name)
+        if not path.exists():
+            with open(name, 'w') as fs:
+                data = input("What do want to write in the file: ")   # You can remove this two line and can write "pass" to continue without writing anything
+                fs.write(data)
+            print(f"File {name} created successfully")
+        else:
+            print("Sorry this file name already exist")
+    except Exception as err:
+        print(f"{err} sorry this error occured")
 
+def readfile():
+    try:
+        name = input("Enter the file you want to read: ")
+        path = Path(name)
+        if path.exists():
+            with open(name, 'r') as fs:
+                data = fs.read()
+                print(data)
+        else:
+            print("Sorry this file name doesn't exist")
+    except Exception as err:
+        print(f"{err} sorry this error occured")
+
+def updatefile():
+    name = input("Enter the file name you want to update: ")
+    path = Path(name)
+    if path.exists():
+        print("Press 1 for changing the file name")
+        print("Press 2 for appending new content in the file")
+        print("Press 3 for deleteing all the content of the file")
+        choice = int(input("What you wanna do: "))
+        
+        if choice == 1:
+            
 
 print("Press 1 for creating a folder")
 print("Press 2 for reading files and folders")
 print("Press 3 for Updating a folder")
 print("Press 4 for deleting a folder")
+print("Press 5 for creating a file")
+print("Press 6 for read a file")
+print("Press 7 for updating a file")
 
 check = int(input("What do you want: "))
 
@@ -45,3 +100,11 @@ elif check == 2:
     readfilesandfolders()
 elif check == 3:
     updatefolder()
+elif check == 4:
+    deletefolder()
+elif check == 5:
+    createfile()
+elif check == 6:
+    readfile()
+elif check == 7:
+    updatefile()
