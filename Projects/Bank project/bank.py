@@ -102,11 +102,23 @@ class Bank:
             user[0].update(info)
             print("Bank details updated successfully.")
             Bank.updatedata()
-
+    
+    @classmethod
+    def viewuserdetails(cls):
+        an = input("Enter your account number : ")
+        pin = int(input("please tell your pin : "))
+        user = [i for i in cls.data if i["Account Number"] == an and i["pin"] == pin]
+        
+        if not user:
+            print("no user found")
+        else:
+            print(f"Your Current details : {user[0]}")
+    
 print("press 1 for creating an account : ")
 print("press 2 to Deposit money : ")
 print("press 3 to Withdraw money : ")
 print("press 4 to Update bank details : ")
+print("press 5 to View user details : ")
 
 check = input("Enter your choice : ")
     
@@ -118,5 +130,7 @@ elif check == "3":
     Bank.withdrawmoney()
 elif check == "4":
     Bank.updatebankdetails()
+elif check == "5":
+    Bank.viewuserdetails()
 else:
     print("Invalid choice.")
