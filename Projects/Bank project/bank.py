@@ -1,10 +1,10 @@
+# Some day notes OOPS
+
+
 import json
 import string
 import random
 import os
-
-# Some day notes OOPS
-
 
 class Bank:
     current_dir = os.path.dirname(os.path.abspath(__file__))
