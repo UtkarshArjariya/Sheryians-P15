@@ -67,9 +67,27 @@ class Factory:
         self.Tyres = T
         self.EngineType = ET
         
+    def Mountain(self):
+        if int(self.EngineType[0]) >= 8:
+            print("You can go to the mountain")
+        else:
+            print("You can't go to the mountain")
+        
+def CreateCar():
+    name = input("Enter the name of the car : ")
+    BodyType = input("Enter the body type of the car : ")
+    Tyres = int(input("Enter the number of tyres of the car : "))
+    EngineType = input("Enter the engine type of the car : ")
+    
+
+    
+        
     
 Ferarri = Factory("Covered",4,"8-Cycle")
 Lord_Alto = Factory("Covered",4,"4-Cycle")
-# Sigma_Splender = Factory("Open",2,"6-Cycle")
+Sigma_Splender = Factory("Open",2,"6-Cycle")
 
-print(Ferarri.BodyType,Ferarri.Tyres,Ferarri.EngineType)
+# print(Ferarri.BodyType)  # In this we call the attribute from the class "Factory" using the object "Ferarri"
+
+# Ferarri.Mountain()  # In this we call the funtion from the class "Factory" using the object "Ferarri"
+
